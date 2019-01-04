@@ -4,30 +4,31 @@ package com.example.thuc.restaurantsdeliveryfood.model;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
-import java.lang.annotation.Annotation;
 
-public class Data implements SerializedName  {
+public class Data implements Serializable  {
 
-
+    @SerializedName("id")
+    public String id;
     @SerializedName("link")
     private String link;
+    @SerializedName("width")
+    public int width;
+    @SerializedName("height")
+    public int height;
 
-    public String getlink() {
-            return link;
-        }
-
-    @Override
-    public String value() {
-        return null;
+    public String getId() {
+        return id;
     }
 
-    @Override
-    public String[] alternate() {
-        return new String[0];
+    public String getLink() {
+        return link;
     }
 
-    @Override
-    public Class<? extends Annotation> annotationType() {
-        return null;
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
     }
 }

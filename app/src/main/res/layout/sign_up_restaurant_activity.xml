@@ -76,7 +76,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="5dp"
                 android:hint="@string/str_diachi"
-                android:inputType="textPassword"
                 android:textAlignment="center"
                 android:textSize="15sp" />
 

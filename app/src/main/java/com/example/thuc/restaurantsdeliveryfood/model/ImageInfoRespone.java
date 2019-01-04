@@ -11,11 +11,12 @@ public class ImageInfoRespone implements Serializable {
     public boolean succes;
     @SerializedName("status")
     public int status;
+
     public  String getURL()
     {
         if(data!=null)
         {
-            return data.getlink();
+            return data.getLink();
         }
         return null;
     }

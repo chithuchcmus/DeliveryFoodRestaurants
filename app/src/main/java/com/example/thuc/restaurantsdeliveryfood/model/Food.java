@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
-public class Food   implements Serializable {
+public class Food implements Serializable {
     @SerializedName("id")
     @Expose
     private int id;
@@ -59,5 +59,9 @@ public class Food   implements Serializable {
 
     public String getName() {
         return name;
+    }
+
+    public void setImg_path(String img_path) {
+        this.img_path = img_path;
     }
 }

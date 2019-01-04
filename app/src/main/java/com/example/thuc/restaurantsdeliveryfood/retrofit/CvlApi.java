@@ -49,26 +49,25 @@ public interface CvlApi {
     @GET("/quan_an/xac_nhan")
     Call<PostResponse> DenyBill(@Query("id_hoa_don") int hoa_don_id, @Query("huy") int huy);
 
-
-    @GET("/quan_an/them_mon_an")
-    Call<PostResponse> newFoodInRes(@QueryMap Map<String, String> info);
-
     @POST("/quan_an/them_mon_an")
     Call<Food> newFoodInRes(@Body Food food);
+
+    @POST("/quan_an/sua_mon_an")
+    Call<Food>EditFood(@Body Food food);
 
     @GET("/xem_danh_gia")
     Call<List<Comment>>getComments(@Query("id_quan_an") int quanan);
 
     @Multipart
     @Headers({
-            "Authorization: Client-ID cfe87b5a59aac43"
+            "Authorization: Client-ID 1a89bd8577b6371"
     })
-    @POST("/3/image")
+    @POST("image")
     Call<ImageInfoRespone> upImage(
+            @Query("album") String albumId,
             @Query("title") String title,
             @Query("description") String description,
-            @Query("album") String albumId,
-            @Query("account_url") String username,
+            @Query("name") String name,
+            @Query("type") String type,
             @Part MultipartBody.Part file);
-
 }

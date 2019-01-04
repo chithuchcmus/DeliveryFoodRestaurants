@@ -111,7 +111,7 @@ public class BillsViewFragment extends Fragment implements BillViewAdapter.BillV
         // Call the bill detail
         Intent i = new Intent(this.getActivity(), NewOrderActivity.class);
         i.putExtra("neworder", r);
-        this.getActivity().startActivityForResult(i, 1);
+        this.getActivity().startActivityForResult(i, MainActivity.ACCCEPT_BILL_STATUS);
     }
 
 

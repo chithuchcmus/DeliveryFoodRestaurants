@@ -106,11 +106,11 @@ public class NewOrderActivity extends AppCompatActivity
                     Intent rslt_int = new Intent();
                     if(response.body().getStatus() == 0 )
                     {
-                        NewOrderActivity.this.setResult(2812, rslt_int);
+                        NewOrderActivity.this.setResult(MainActivity.DENY_BILL_SUCCES, rslt_int);
                     }
                     else
                     {
-                        NewOrderActivity.this.setResult(RESULT_CANCELED, rslt_int);
+                        NewOrderActivity.this.setResult(MainActivity.DENY_BILL_FAIL, rslt_int);
                     }
                     finish();
                 }
@@ -149,13 +149,12 @@ public class NewOrderActivity extends AppCompatActivity
                     Intent rslt_int = new Intent();
                     if(response.body().getStatus() == 0 )
                     {
-                        NewOrderActivity.this.setResult(RESULT_OK, rslt_int);
+                        NewOrderActivity.this.setResult(MainActivity.ACCCEPT_BILL_SUCCES, rslt_int);
                     }
                     else
                     {
-                        NewOrderActivity.this.setResult(RESULT_CANCELED, rslt_int);
+                        NewOrderActivity.this.setResult(MainActivity.ACCCEPT_BILL_FAIL, rslt_int);
                     }
-                    rslt_int.putExtra("AAA", 1);
                     finish();
                 }
 

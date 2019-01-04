@@ -27,12 +27,14 @@
     <string name="str_mota_mon">Còn hàng</string>
     <string name="str_hinh_mon">Hình Món Ăn</string>
     <string name="str_them_mon_an">Thông Tin Món Ăn</string>
-    <string name="str_button_click_image">Tìm Kiếm</string>
+    <string name="str_button_click_image">Hình ảnh</string>
     <string name="customer_addr">Địa chỉ khách hàng</string>
     <string name="restaurant_addr">Địa chỉ quán</string>
     <string name="detail">Chi tiết</string>
     <string name="total">Tổng giá</string>
     <string name="str_frament_comment">Xem đánh giá</string>
+    <string name="str_edit">Sửa</string>
+
 
     <string name="setting_thay_doi_mat_khau">Thay đổi mật khẩu</string>
     <string name="setting_cai_dat_thong_bao">Cài đặt thông báo</string>

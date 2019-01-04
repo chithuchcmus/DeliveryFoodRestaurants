@@ -54,14 +54,14 @@ public class FoodViewFrament extends Fragment implements FoodDetailsAdapter.OnFo
             public void onClick(View v) {
                 Intent i = new Intent(FoodViewFrament.this.getActivity(),AddFoodInResActivity.class);
                 i.putExtra("data",2);
-                FoodViewFrament.this.getActivity().startActivity(i);
+                FoodViewFrament.this.getActivity().startActivityForResult(i,MainActivity.ADD_FOOD_STATUS);
             }
         });
         return view;
     }
 
 
-    public void getFood()
+     public  void getFood()
     {
         Retrofit retrofit = RetrofitObject.getInstance();
         retrofit.create(CvlApi.class).getFoodsList(MainActivity.restaurant.getId()).enqueue(new Callback<List<Food>>() {
@@ -93,10 +93,9 @@ public class FoodViewFrament extends Fragment implements FoodDetailsAdapter.OnFo
 
     @Override
     public void onFoodClick(Food f) {
-       // Intent i = new Intent(this.getActivity(), ChangeFoodInResActivity.class);
         Intent i = new Intent(this.getActivity(),ChangeFoodInResActivity.class);
         i.putExtra("food", (Serializable) f);
-        FoodViewFrament.this.getActivity().startActivity(i);
+        FoodViewFrament.this.getActivity().startActivityForResult(i,MainActivity.EDIT_FOOD_STATUS);
     }
 
 }
