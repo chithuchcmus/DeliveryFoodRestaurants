@@ -3,6 +3,7 @@ package com.example.thuc.restaurantsdeliveryfood.retrofit;
 
 import com.example.thuc.restaurantsdeliveryfood.model.Bill;
 import com.example.thuc.restaurantsdeliveryfood.model.BillDetail;
+import com.example.thuc.restaurantsdeliveryfood.model.Comment;
 import com.example.thuc.restaurantsdeliveryfood.model.Food;
 import com.example.thuc.restaurantsdeliveryfood.model.ImageInfoRespone;
 import com.example.thuc.restaurantsdeliveryfood.model.PostResponse;
@@ -55,6 +56,8 @@ public interface CvlApi {
     @POST("/quan_an/them_mon_an")
     Call<Food> newFoodInRes(@Body Food food);
 
+    @GET("/xem_danh_gia")
+    Call<List<Comment>>getComments(@Query("id_quan_an") int quanan);
 
     @Multipart
     @Headers({

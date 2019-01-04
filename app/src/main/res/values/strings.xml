@@ -14,14 +14,14 @@
     <string name="str_missing_info">Bạn phải điền đủ thông tin</string>
     <string name="BASE_URL">https://fast-atoll-52540.herokuapp.com</string>
     <string name="favorite">Yêu thích</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_activity_main">Restaurants</string>
+    <string name="title_home">Danh sách Món</string>
+    <string name="title_dashboard">Danh sách Đơn</string>
     <string name="str_nameQuan">Tên Quán</string>
     <string name="str_nameNguoiChu">Tên Của Bạn</string>
     <string name="str_diachi">Địa chỉ</string>
     <string name="str_tinhThanhPho">Tỉnh/Thành Phố</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_notifications">Cài Đặt</string>
     <string name="str_ten_mon">Tên Món Ăn</string>
     <string name="str_gia_mon">Giá Món Ăn</string>
     <string name="str_mota_mon">Còn hàng</string>
@@ -32,6 +32,11 @@
     <string name="restaurant_addr">Địa chỉ quán</string>
     <string name="detail">Chi tiết</string>
     <string name="total">Tổng giá</string>
+    <string name="str_frament_comment">Xem đánh giá</string>
+
+    <string name="setting_thay_doi_mat_khau">Thay đổi mật khẩu</string>
+    <string name="setting_cai_dat_thong_bao">Cài đặt thông báo</string>
+    <string name="setting_logout">đăng xuất</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

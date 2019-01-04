@@ -25,6 +25,18 @@ public class Food   implements Serializable {
     @Expose
     private String img_path;
 
+    public int getPrice() {
+        return price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getImg_path() {
+        return img_path;
+    }
+
     public int getId() {
         return id;
     }
@@ -47,17 +59,5 @@ public class Food   implements Serializable {
 
     public String getName() {
         return name;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public String getImg_path() {
-        return img_path;
     }
 }

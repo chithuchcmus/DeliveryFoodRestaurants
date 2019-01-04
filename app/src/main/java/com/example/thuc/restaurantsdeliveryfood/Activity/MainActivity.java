@@ -1,7 +1,8 @@
 package com.example.thuc.restaurantsdeliveryfood.Activity;
+
+
+
 import com.example.thuc.restaurantsdeliveryfood.R;
-
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity  {
     private FrameLayout frame;
     private FoodViewFrament foodViewFrament = new FoodViewFrament();
     private BillsViewFragment billViewFragment = new BillsViewFragment();
+    private SetttingViewFrament setttingViewFrament = new SetttingViewFrament();
+    private RestaurantDetailCommentFragment detailCommentFragment = new RestaurantDetailCommentFragment();
     // More fragment
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -35,16 +38,21 @@ public class MainActivity extends AppCompatActivity  {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_home:
+                case R.id.navigation_Listfood:
                     loadFragment(foodViewFrament);
                     foodViewFrament.getFood();
                     return true;
-                case R.id.navigation_dashboard:
+                case R.id.navigation_list_bill:
                     loadFragment(billViewFragment);
                     billViewFragment.getBills();
                     return true;
-                case R.id.navigation_notifications:
+                case R.id.navigation_setting:
+                    loadFragment(setttingViewFrament);
                     return true;
+                case R.id.navigation_list_comment:
+                    loadFragment(detailCommentFragment);
+                    return true;
+
             }
             return false;
         }
@@ -92,12 +100,14 @@ public class MainActivity extends AppCompatActivity  {
             if(resultCode == 2812){
                 dialog.setMessage("Đã từ chối");
             }
+            AlertDialog alertDialog = dialog.create();
+            alertDialog.show();
+
         }
         else
         {
             Log.d(TAG, String.format("got result %d for %d ",resultCode, requestCode));
         }
-        AlertDialog alertDialog = dialog.create();
-        alertDialog.show();
+
     }
 }

@@ -1,8 +1,8 @@
 package com.example.thuc.restaurantsdeliveryfood.Activity;
+
+
 import com.example.thuc.restaurantsdeliveryfood.Adapter.NewOrderDetailsAdapter;
 import com.example.thuc.restaurantsdeliveryfood.R;
-
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;

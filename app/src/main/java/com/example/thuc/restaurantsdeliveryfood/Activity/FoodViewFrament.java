@@ -30,7 +30,8 @@ import retrofit2.Retrofit;
 
 import static android.content.ContentValues.TAG;
 
-public class FoodViewFrament extends Fragment implements FoodDetailsAdapter.OnFoodClickListener {
+public class FoodViewFrament extends Fragment implements FoodDetailsAdapter.OnFoodClickListener
+{
     RecyclerView recyclerView;
     List<Food> foodList;
     FoodDetailsAdapter adapter;

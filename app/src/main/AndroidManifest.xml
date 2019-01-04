@@ -29,7 +29,7 @@
 
         <activity
         android:name=".Activity.MainActivity"
-        android:label="@string/title_activity_main" />
+            android:theme="@style/NoActionBar"/>
         <activity android:name=".Activity.ChangeFoodInResActivity"></activity>
 
     </application>
