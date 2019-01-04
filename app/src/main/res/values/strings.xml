@@ -1,0 +1,42 @@
+﻿<resources>
+    <string name="app_name">DeliveryFood</string>
+    <string name="login_edit_text_sdt_hint">Email hoặc số điện thoại</string>
+    <string name="login_edit_text_password_hint">Mật khẩu</string>
+    <string name="login_button_dangnhap">Đăng Nhập</string>
+    <string name="login_button_dangky">Đăng ký</string>
+    <string name="app_name_with_spaces">CVL Delivery Now</string>
+    <string name="str_name">Tên</string>
+    <string name="str_phone_number">Số điện thoại</string>
+    <string name="str_password">Password</string>
+    <string name="str_email">Email</string>
+    <string name="str_signup">ĐĂNG KÝ</string>
+    <string name="str_ok">OK</string>
+    <string name="str_missing_info">Bạn phải điền đủ thông tin</string>
+    <string name="BASE_URL">https://fast-atoll-52540.herokuapp.com</string>
+    <string name="favorite">Yêu thích</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="str_nameQuan">Tên Quán</string>
+    <string name="str_nameNguoiChu">Tên Của Bạn</string>
+    <string name="str_diachi">Địa chỉ</string>
+    <string name="str_tinhThanhPho">Tỉnh/Thành Phố</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="str_ten_mon">Tên Món Ăn</string>
+    <string name="str_gia_mon">Giá Món Ăn</string>
+    <string name="str_mota_mon">Còn hàng</string>
+    <string name="str_hinh_mon">Hình Món Ăn</string>
+    <string name="str_them_mon_an">Thông Tin Món Ăn</string>
+    <string name="str_button_click_image">Tìm Kiếm</string>
+    <string name="customer_addr">Địa chỉ khách hàng</string>
+    <string name="restaurant_addr">Địa chỉ quán</string>
+    <string name="detail">Chi tiết</string>
+    <string name="total">Tổng giá</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="total_price">Tổng tiền:</string>
+    <string name="bill">#Hoá đơn</string>
+    <string name="bill_address">Địa chỉ</string>
+</resources>
