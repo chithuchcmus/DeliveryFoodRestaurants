@@ -1,9 +1,7 @@
 package com.example.thuc.restaurantsdeliveryfood.Activity;
 
 import com.example.thuc.restaurantsdeliveryfood.R;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
+
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -13,12 +11,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 
 
 import com.example.thuc.restaurantsdeliveryfood.Adapter.CommentViewAdapter;
 import com.example.thuc.restaurantsdeliveryfood.model.Comment;
-import com.example.thuc.restaurantsdeliveryfood.model.PostResponse;
 import com.example.thuc.restaurantsdeliveryfood.model.Restaurant;
 import com.example.thuc.restaurantsdeliveryfood.model.User;
 import com.example.thuc.restaurantsdeliveryfood.retrofit.CvlApi;
@@ -43,7 +39,7 @@ public class RestaurantDetailCommentFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         // Get the reference of all the views in the fragment (after being created)
-        view = inflater.inflate(R.layout.comment_list_fragment, container, false);
+        view = inflater.inflate(R.layout.comment_view_frament, container, false);
 
         recyclerView = view.findViewById(R.id.comment_list_recycler_view);
         comments = new ArrayList<>();
@@ -55,7 +51,7 @@ public class RestaurantDetailCommentFragment extends Fragment {
         return view;
     }
 
-    private void getComments() {
+    public void getComments() {
         Retrofit retrofit = RetrofitObject.getInstance();
         retrofit.create(CvlApi.class).getComments(MainActivity.restaurant.getId()).enqueue(new Callback<List<Comment>>() {
             @Override

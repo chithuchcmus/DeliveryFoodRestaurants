@@ -34,6 +34,10 @@
     <string name="total">Tổng giá</string>
     <string name="str_frament_comment">Xem đánh giá</string>
     <string name="str_edit">Sửa</string>
+    <string name="str_delete">Xóa</string>
+
+    <string name="search_title">Tìm Món Ăn</string>
+
 
 
     <string name="setting_thay_doi_mat_khau">Thay đổi mật khẩu</string>

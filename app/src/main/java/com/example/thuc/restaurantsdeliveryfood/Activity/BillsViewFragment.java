@@ -3,12 +3,10 @@ import com.example.thuc.restaurantsdeliveryfood.Adapter.BillViewAdapter;
 import com.example.thuc.restaurantsdeliveryfood.R;
 
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,8 +25,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-import static android.content.ContentValues.TAG;
-
 public class BillsViewFragment extends Fragment implements BillViewAdapter.BillViewOnClickListener {
     int resid;
     RecyclerView recyclerView;
@@ -41,7 +37,7 @@ public class BillsViewFragment extends Fragment implements BillViewAdapter.BillV
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         resid = MainActivity.restaurant.getId();
-        View view = inflater.inflate(R.layout.fragment_bills_view, container, false);
+        View view = inflater.inflate(R.layout.bill_view_frament, container, false);
         recyclerView = view.findViewById(R.id.bill_view_recycler_view);
         bills = new ArrayList<>();
         adapter = new BillViewAdapter(bills, this);

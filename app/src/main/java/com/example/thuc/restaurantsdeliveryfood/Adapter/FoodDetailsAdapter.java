@@ -26,7 +26,7 @@ public class FoodDetailsAdapter extends RecyclerView.Adapter<FoodDetailsAdapter.
     @Override
     public FoodDetailsAdapter.FoodDetailsHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.food_info_view_layout,viewGroup,false);
+                .inflate(R.layout.food_info_item,viewGroup,false);
         return new FoodDetailsHolder(view);
     }
     public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
@@ -56,7 +56,6 @@ public class FoodDetailsAdapter extends RecyclerView.Adapter<FoodDetailsAdapter.
     public void onBindViewHolder(@NonNull FoodDetailsAdapter.FoodDetailsHolder foodDetailsHolder, final int i) {
 
         foodDetailsHolder.food_name.setText(foods.get(i).getName());
-        foodDetailsHolder.food_status.setText(foods.get(i).getDescription());
         foodDetailsHolder.food_price.setText(String.valueOf(foods.get(i).getPrice()));
         new FoodDetailsAdapter.DownloadImageTask(foodDetailsHolder.food_image).execute(foods.get(i).getImg_path());
         foodDetailsHolder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -94,7 +93,6 @@ public class FoodDetailsAdapter extends RecyclerView.Adapter<FoodDetailsAdapter.
         public FoodDetailsHolder(@NonNull View itemView) {
             super(itemView);
             food_name = itemView.findViewById(R.id.food_detail_name);
-            food_status = itemView.findViewById(R.id.food_detail_desc);
             food_price = itemView.findViewById(R.id.food_detail_price);
             food_image = itemView.findViewById(R.id.food_detail_img);
         }

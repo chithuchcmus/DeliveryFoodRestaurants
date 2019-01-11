@@ -7,10 +7,12 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.thuc.restaurantsdeliveryfood.model.Restaurant;
@@ -28,6 +30,8 @@ public class LoginActivity extends AppCompatActivity {
 
     String phone_number;
     String password;
+    CardView cardViewLogin;
+    TextView register;
     AlertDialog.Builder builder;
     boolean isSendingRequest = false;
     final private int SIGN_IN=3;
@@ -38,6 +42,20 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         builder = new AlertDialog.Builder(this);
+        cardViewLogin = (CardView)findViewById(R.id.login);
+        register = (TextView)findViewById(R.id.register);
+        cardViewLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loginBtnClicked(v);
+            }
+        });
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                registerBtnClicked(v);
+            }
+        });
     }
 
     public void registerBtnClicked(View view) {
@@ -49,22 +67,22 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-        builder.setTitle("Thông báo");
         if(requestCode==SIGN_IN)
         {
+            builder.setTitle("Thông báo");
+            builder.setCancelable(true);
+
             if(resultCode==SIGN_IN_SUCCES)
             {
                 builder.setMessage("Đăng kí thành công, ID mới của bạn là " + data.getExtras().getString("new_id"));
+                builder.show();
             }
             if(resultCode == SIGN_IN_FAIL)
             {
                 builder.setMessage("Đăng kí thất bại");
+                builder.show();
             }
-
         }
-        builder.setCancelable(true);
-        builder.show();
     }
 
     public void loginBtnClicked(View view) {
@@ -123,8 +141,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void GetResnamePassword() {
-        EditText phoneET = findViewById(R.id.login_layout_edit_text_sdt);
-        EditText passET = findViewById(R.id.login_layout_edit_text_password);
+        EditText phoneET = findViewById(R.id.username_login);
+        EditText passET = findViewById(R.id.password_login);
         phone_number = phoneET.getText().toString();
         password = passET.getText().toString();
     }

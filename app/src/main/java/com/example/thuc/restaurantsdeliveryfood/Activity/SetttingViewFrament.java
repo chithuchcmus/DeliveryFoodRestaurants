@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.thuc.restaurantsdeliveryfood.Adapter.CommentViewAdapter;
 import com.example.thuc.restaurantsdeliveryfood.R;
 
 import java.io.InputStream;
@@ -26,7 +25,7 @@ public class SetttingViewFrament extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        View view = inflater.inflate(R.layout.setting_frament, container, false);
+        View view = inflater.inflate(R.layout.setting_view_frament, container, false);
         nameRes = (TextView)view.findViewById(R.id.setting_res_name);
         avarata = (ImageView)view.findViewById(R.id.setting_avarta);
         setData();

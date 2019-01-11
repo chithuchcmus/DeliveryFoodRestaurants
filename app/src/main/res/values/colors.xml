@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="color_black">#0e0e0e</color>
-    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimary">#2A3c58</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="tabcolor">#22c2e6</color>
     <color name="tabselect">#1b57d8</color>
     <color name="backGroundNewOrder">#e0e1e4</color>
     <color name="taskBar">#0b99c9</color>
-
 </resources>

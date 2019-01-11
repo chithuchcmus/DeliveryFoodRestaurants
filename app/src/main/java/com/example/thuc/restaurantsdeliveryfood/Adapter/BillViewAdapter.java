@@ -20,7 +20,7 @@ public class BillViewAdapter extends RecyclerView.Adapter<BillViewAdapter.BillHo
     @Override
     public BillHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.bill_info_view,viewGroup,false);
+                .inflate(R.layout.bill_view_item,viewGroup,false);
         return new BillHolder(view);
     }
 

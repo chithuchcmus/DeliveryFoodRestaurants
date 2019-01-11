@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -31,6 +32,7 @@ public class SignUpActivity extends AppCompatActivity {
     private String email;
     private String password;
     private String address;
+    private CardView registerSubmit;
     final private int SIGN_IN_SUCCES=10;
     final private int SIGN_IN_FAIL=15;
 
@@ -43,12 +45,19 @@ public class SignUpActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sign_up_restaurant_activity);
-        nameResET = findViewById(R.id.nameQuanEdit);
-        phoneET = findViewById(R.id.phoneEdit);
-        passwordET = findViewById(R.id.passwordEdit);
-        emailET = findViewById(R.id.emailEdit);
-        addressET  = findViewById(R.id.addresEdit);
+        setContentView(R.layout.activity_register);
+        nameResET = findViewById(R.id.ten_mon_add);
+        phoneET = findViewById(R.id.gia_mon_edit);
+        passwordET = findViewById(R.id.password_register);
+        emailET = findViewById(R.id.email_register);
+        addressET  = findViewById(R.id.address_register);
+        registerSubmit =(CardView)findViewById(R.id.add_submit);
+        registerSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                submitRegisterInfoClicked(v);
+            }
+        });
 
     }
 

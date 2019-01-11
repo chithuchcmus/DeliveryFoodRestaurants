@@ -8,7 +8,7 @@
     <item
         android:id="@+id/navigation_list_bill"
         android:icon="@drawable/ic_restaurants_bill_black_24dp"
-        android:title="@string/title_dashboard" />
+        android:title="@string/title_dashboard"/>
     <item
         android:id="@+id/navigation_list_comment"
         android:icon="@drawable/ic_restaurants_user_comment_black_24dp"
@@ -17,5 +17,4 @@
         android:id="@+id/navigation_setting"
         android:icon="@drawable/ic_restaurants_setting_black_24dp"
         android:title="@string/title_notifications" />
-
 </menu>

@@ -2,13 +2,11 @@ package com.example.thuc.restaurantsdeliveryfood.Activity;
 import com.example.thuc.restaurantsdeliveryfood.Adapter.FoodDetailsAdapter;
 import com.example.thuc.restaurantsdeliveryfood.R;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,8 +26,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-import static android.content.ContentValues.TAG;
-
 public class FoodViewFrament extends Fragment implements FoodDetailsAdapter.OnFoodClickListener
 {
     RecyclerView recyclerView;
@@ -40,7 +36,7 @@ public class FoodViewFrament extends Fragment implements FoodDetailsAdapter.OnFo
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
-        View view = inflater.inflate(R.layout.restaurants_listfood, container, false);
+        View view = inflater.inflate(R.layout.food_view_frament, container, false);
         recyclerView =(RecyclerView) view.findViewById(R.id.recycle_view_list_restaurant_food);
         floatingActionButton = (FloatingActionButton)view.findViewById(R.id.floating_button_add_food_in_framentfoodview);
         recyclerView.setHasFixedSize(true);
@@ -52,7 +48,7 @@ public class FoodViewFrament extends Fragment implements FoodDetailsAdapter.OnFo
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(FoodViewFrament.this.getActivity(),AddFoodInResActivity.class);
+                Intent i = new Intent(FoodViewFrament.this.getActivity(),AddFoodActivity.class);
                 i.putExtra("data",2);
                 FoodViewFrament.this.getActivity().startActivityForResult(i,MainActivity.ADD_FOOD_STATUS);
             }
@@ -93,7 +89,7 @@ public class FoodViewFrament extends Fragment implements FoodDetailsAdapter.OnFo
 
     @Override
     public void onFoodClick(Food f) {
-        Intent i = new Intent(this.getActivity(),ChangeFoodInResActivity.class);
+        Intent i = new Intent(this.getActivity(),EditFoodActivity.class);
         i.putExtra("food", (Serializable) f);
         FoodViewFrament.this.getActivity().startActivityForResult(i,MainActivity.EDIT_FOOD_STATUS);
     }

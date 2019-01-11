@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity  {
     final static public int EDIT_FOOD_SUCCES=20;
     final static public int EDIT_FOOD_FAIL=21;
     final static public int EDIT_FOOD_STATUS=2;
+    final static public int DELETE_FOOD_FAIL=22;
+    final static public int DELETE_FOOD_SUCCES=23;
 
     final static public int ADD_FOOD_STATUS=1;
     final static public int ADD_FOOD_SUCCES=10;
@@ -56,17 +58,21 @@ public class MainActivity extends AppCompatActivity  {
             switch (item.getItemId()) {
                 case R.id.navigation_Listfood:
                     loadFragment(foodViewFrament);
+                    getSupportActionBar().setTitle("Món Ăn");
                     foodViewFrament.getFood();
                     return true;
                 case R.id.navigation_list_bill:
                     loadFragment(billViewFragment);
+                    getSupportActionBar().setTitle("Đơn");
                     billViewFragment.getBills();
                     return true;
                 case R.id.navigation_setting:
                     loadFragment(setttingViewFrament);
+                    getSupportActionBar().setTitle("Cài Đặt");
                     return true;
                 case R.id.navigation_list_comment:
                     loadFragment(detailCommentFragment);
+                    getSupportActionBar().setTitle("Bình Luận");
                     return true;
 
             }
@@ -86,6 +92,8 @@ public class MainActivity extends AppCompatActivity  {
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         loadFragment(foodViewFrament);
+        getSupportActionBar().setTitle("Món Ăn");
+
     }
 
     private boolean loadFragment(Fragment fragment){
@@ -104,53 +112,73 @@ public class MainActivity extends AppCompatActivity  {
         if(requestCode == MainActivity.ACCCEPT_BILL_STATUS){
             if(resultCode == MainActivity.ACCCEPT_BILL_SUCCES)
             {
-                dialog.setTitle("Thông báo \n");
                 dialog.setMessage("Xác nhận thành công\n");
                 billViewFragment.getBills();
-
+                AlertDialog alertDialog = dialog.create();
+                alertDialog.show();
             }
-            if(resultCode == MainActivity.ACCCEPT_BILL_FAIL)
+            else if(resultCode == MainActivity.ACCCEPT_BILL_FAIL)
             {
-                dialog.setTitle("Xác nhận thất bại\n");
+                dialog.setMessage("Xác nhận thất bại\n");
+                AlertDialog alertDialog = dialog.create();
+                alertDialog.show();
             }
-            if(resultCode == MainActivity.DENY_BILL_SUCCES){
+            else if(resultCode == MainActivity.DENY_BILL_SUCCES){
                 dialog.setMessage("Đã từ chối");
+                AlertDialog alertDialog = dialog.create();
+                alertDialog.show();
             }
-            AlertDialog alertDialog = dialog.create();
-            alertDialog.show();
 
         }
         else if(requestCode == MainActivity.ADD_FOOD_STATUS)
         {
+
             if(resultCode == MainActivity.ADD_FOOD_SUCCES)
             {
-                dialog.setTitle("Thông báo \n");
                 dialog.setMessage("Thêm Món Ăn thành công\n");
                 foodViewFrament.getFood();
+                AlertDialog alertDialog = dialog.create();
+                alertDialog.show();
 
             }
-            if(resultCode == MainActivity.ADD_FOOD_FAIL)
+            else if(resultCode == MainActivity.ADD_FOOD_FAIL)
             {
-                dialog.setTitle("Thêm Món Ăn thất bại\n");
+                dialog.setMessage("Thêm Món Ăn thất bại\n");
+                AlertDialog alertDialog = dialog.create();
+                alertDialog.show();
             }
-            AlertDialog alertDialog = dialog.create();
-            alertDialog.show();
         }
         else if(requestCode == MainActivity.EDIT_FOOD_STATUS)
         {
             if(resultCode == MainActivity.EDIT_FOOD_SUCCES)
             {
-                dialog.setTitle("Thông báo \n");
                 dialog.setMessage("Sửa thông tin món ăn thành công\n");
                 foodViewFrament.getFood();
-
+                AlertDialog alertDialog = dialog.create();
+                alertDialog.show();
             }
-            if(resultCode == MainActivity.EDIT_FOOD_FAIL)
+            else if(resultCode == MainActivity.EDIT_FOOD_FAIL)
             {
-                dialog.setTitle("Sửa thông tin món ăn thất bại\n");
+                dialog.setMessage("Sửa thông tin món ăn thất bại\n");
+                AlertDialog alertDialog = dialog.create();
+                alertDialog.show();
             }
-            AlertDialog alertDialog = dialog.create();
-            alertDialog.show();
+            else if(resultCode == MainActivity.DELETE_FOOD_SUCCES)
+            {
+                foodViewFrament.getFood();
+                dialog.setMessage("Xóa món ăn thành công\n");
+                AlertDialog alertDialog = dialog.create();
+                alertDialog.show();
+            }
+            else if(resultCode == MainActivity.DELETE_FOOD_FAIL)
+            {
+                dialog.setMessage("Xóa món ăn thất bại\n");
+                AlertDialog alertDialog = dialog.create();
+                alertDialog.show();
+            }
+        }
+        else {
+
         }
 
     }

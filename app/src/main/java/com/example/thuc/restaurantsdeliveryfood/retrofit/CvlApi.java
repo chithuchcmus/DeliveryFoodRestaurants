@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 import okhttp3.MultipartBody;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -51,6 +52,9 @@ public interface CvlApi {
 
     @POST("/quan_an/them_mon_an")
     Call<Food> newFoodInRes(@Body Food food);
+
+    @GET("/quan_an/xoa_mon_an")
+    Call<PostResponse> DeleteFood(@Query("id_mon_an") int id_mon);
 
     @POST("/quan_an/sua_mon_an")
     Call<Food>EditFood(@Body Food food);

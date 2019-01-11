@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class NewOrderDetailsAdapter extends RecyclerView.Adapter<NewOrderDetailsAdapter.NewOrderFoodInfoViewHolder> {
@@ -18,7 +17,7 @@ public class NewOrderDetailsAdapter extends RecyclerView.Adapter<NewOrderDetails
     @Override
     public NewOrderDetailsAdapter.NewOrderFoodInfoViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
-        View view = inflater.inflate(R.layout.order_food_info_item_layout, viewGroup, false);
+        View view = inflater.inflate(R.layout.bill_detail_info_item, viewGroup, false);
         return new NewOrderFoodInfoViewHolder(view);
 
     }

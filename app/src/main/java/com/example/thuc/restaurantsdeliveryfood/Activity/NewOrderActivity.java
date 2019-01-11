@@ -46,7 +46,7 @@ public class NewOrderActivity extends AppCompatActivity
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.new_order_detail_layout);
+        setContentView(R.layout.bill_detail_view);
         bill = (Bill) getIntent().getExtras().get("neworder");
         getView();
         recyclerView = (RecyclerView)findViewById(R.id.bill_detail_recycler_view);
