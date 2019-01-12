@@ -71,7 +71,7 @@ public class AddFoodActivity extends AppCompatActivity {
 
         imageViewFood = findViewById(R.id.image_view_add);
         nameFoodET = findViewById(R.id.ten_mon_add);
-        priceET = findViewById(R.id.gia_mon_edit);
+        priceET = findViewById(R.id.gia_mon_add);
 
         addFood = findViewById(R.id.add_submit);
         addImage = findViewById(R.id.button_find_image_add);

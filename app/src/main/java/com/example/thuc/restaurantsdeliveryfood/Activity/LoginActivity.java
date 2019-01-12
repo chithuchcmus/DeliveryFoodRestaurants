@@ -4,6 +4,8 @@ import com.example.thuc.restaurantsdeliveryfood.R;
 
 import android.content.Intent;
 import android.support.annotation.Nullable;
+import android.support.design.button.MaterialButton;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
 
     String phone_number;
     String password;
-    CardView cardViewLogin;
+    MaterialButton cardViewLogin;
     TextView register;
     AlertDialog.Builder builder;
     boolean isSendingRequest = false;
@@ -42,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         builder = new AlertDialog.Builder(this);
-        cardViewLogin = (CardView)findViewById(R.id.login);
+        cardViewLogin = (MaterialButton) findViewById(R.id.login);
         register = (TextView)findViewById(R.id.register);
         cardViewLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,8 +143,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void GetResnamePassword() {
-        EditText phoneET = findViewById(R.id.username_login);
-        EditText passET = findViewById(R.id.password_login);
+        TextInputEditText phoneET = findViewById(R.id.username_login);
+        TextInputEditText passET = findViewById(R.id.password_login);
         phone_number = phoneET.getText().toString();
         password = passET.getText().toString();
     }

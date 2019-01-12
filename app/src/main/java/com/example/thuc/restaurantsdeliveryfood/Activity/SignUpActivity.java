@@ -46,12 +46,12 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        nameResET = findViewById(R.id.ten_mon_add);
+        nameResET = findViewById(R.id.ten_mon_edit);
         phoneET = findViewById(R.id.gia_mon_edit);
         passwordET = findViewById(R.id.password_register);
         emailET = findViewById(R.id.email_register);
         addressET  = findViewById(R.id.address_register);
-        registerSubmit =(CardView)findViewById(R.id.add_submit);
+        registerSubmit =(CardView)findViewById(R.id.delete_submit);
         registerSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

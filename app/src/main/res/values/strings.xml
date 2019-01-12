@@ -15,8 +15,8 @@
     <string name="BASE_URL">https://fast-atoll-52540.herokuapp.com</string>
     <string name="favorite">Yêu thích</string>
     <string name="title_activity_main">Restaurants</string>
-    <string name="title_home">Danh sách Món</string>
-    <string name="title_dashboard">Danh sách Đơn</string>
+    <string name="title_home">Món Ăn</string>
+    <string name="title_dashboard">Đơn Hàng</string>
     <string name="str_nameQuan">Tên Quán</string>
     <string name="str_nameNguoiChu">Tên Của Bạn</string>
     <string name="str_diachi">Địa chỉ</string>
@@ -50,4 +50,5 @@
     <string name="total_price">Tổng tiền:</string>
     <string name="bill">#Hoá đơn</string>
     <string name="bill_address">Địa chỉ</string>
+
 </resources>

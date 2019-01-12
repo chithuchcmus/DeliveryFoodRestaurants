@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,7 +56,6 @@ public class FoodViewFrament extends Fragment implements FoodDetailsAdapter.OnFo
         });
         return view;
     }
-
 
      public  void getFood()
     {

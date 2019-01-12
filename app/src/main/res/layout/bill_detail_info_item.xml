@@ -30,6 +30,5 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="#0000ff"
         android:layout_weight="1"/>
 </LinearLayout>

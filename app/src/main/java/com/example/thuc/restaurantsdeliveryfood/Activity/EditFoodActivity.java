@@ -14,6 +14,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.button.MaterialButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -64,8 +65,8 @@ public class EditFoodActivity extends AppCompatActivity
     private EditText priceFoodET;
     private ImageView foodImage;
 
-    private CardView startEdit;
-    private CardView startDelete;
+    private MaterialButton startEdit;
+    private MaterialButton startDelete;
     private Button buttonFindNewImage;
 
     private final int PICK_IMAGE_TO_EDIT = 106;
@@ -76,12 +77,12 @@ public class EditFoodActivity extends AppCompatActivity
         setContentView(R.layout.activity_edit_delete_food);
         checkfind=0;
         food = (Food) getIntent().getExtras().get("food");
-        nameFoodET = (EditText) findViewById(R.id.ten_mon_add);
+        nameFoodET = (EditText) findViewById(R.id.ten_mon_edit);
         priceFoodET = (EditText)findViewById(R.id.gia_mon_edit);
-        foodImage = (ImageView) findViewById(R.id.image_view_add);
+        foodImage = (ImageView) findViewById(R.id.image_view_edit);
         buttonFindNewImage = (Button)findViewById(R.id.button_find_image_edit);
         startEdit = findViewById(R.id.edit_submit);
-        startDelete =findViewById(R.id.add_submit);
+        startDelete =findViewById(R.id.delete_submit);
 
         loadData();
         buttonFindNewImage.setOnClickListener(new View.OnClickListener() {

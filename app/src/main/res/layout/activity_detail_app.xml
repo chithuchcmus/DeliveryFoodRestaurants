@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.card.MaterialCardView
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        app:cardElevation="15dp"
+        android:background="@drawable/ripple"
+        android:clickable="true"
+        android:id="@+id/thong_tin_app"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/background_setting">
+        <RelativeLayout
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_alignParentTop="true"
+                android:fontFamily="@font/museosanscyrl"
+                android:text="Thiết kế và phát triển"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:id="@+id/end_name"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/museosanscyrl"
+                android:text="Nguyễn Chí Thức"
+                 android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_marginLeft="50dp"
+
+                android:layout_above="@+id/end_name"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/museosanscyrl"
+                android:text="Nguyễn Trần Hậu"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </android.support.design.card.MaterialCardView>
+    <android.support.design.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        app:cardElevation="2dp"
+        android:background="@drawable/ripple"
+        android:clickable="true"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/dia_chi_thong_tin_app"
+        android:layout_below="@+id/thong_tin_app">
+        <RelativeLayout
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_alignParentTop="true"
+                android:fontFamily="@font/museosanscyrl"
+                android:text="Địa chỉ"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:id="@+id/end_name1"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/museosanscyrl"
+                android:text="Trường đại học khoa học tự nhiên"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_above="@+id/end_name1"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/museosanscyrl"
+                android:text="225 Nguyễn Văn Cừ, Quận 5, Tp HCM"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </android.support.design.card.MaterialCardView>
+    <android.support.design.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        app:cardElevation="15dp"
+        android:background="@drawable/ripple"
+        android:clickable="true"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/dia_chi_thong_tin_app">
+        <RelativeLayout
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_alignParentTop="true"
+                android:fontFamily="@font/museosanscyrl"
+                android:text="Số điện thoại"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:id="@+id/end_name2"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/museosanscyrl"
+                android:text="0911610898"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_above="@+id/end_name2"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/museosanscyrl"
+                android:text="0386188015"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </android.support.design.card.MaterialCardView>
+</RelativeLayout>

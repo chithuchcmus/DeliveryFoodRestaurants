@@ -32,7 +32,6 @@ import retrofit2.Retrofit;
 
 public class NewOrderActivity extends AppCompatActivity
 {
-    private TextView textViewNew_order_detail_trang_thai;
     private TextView textViewNew_order_detail_dia_chi_khach;
     private TextView textViewNew_order_detail_dia_chi_quan;
     private TextView textViewNew_order_detial_sumprice;
@@ -74,7 +73,6 @@ public class NewOrderActivity extends AppCompatActivity
         textViewNew_order_detial_sumprice = (TextView)findViewById(R.id.bill_detail_total);
         textViewNew_order_detail_dia_chi_khach = (TextView)findViewById(R.id.bill_detail_customer_addr);
         textViewNew_order_detail_dia_chi_quan = (TextView)findViewById(R.id.bill_detail_restaurant_addr);
-        textViewNew_order_detail_trang_thai =(TextView) findViewById(R.id.bill_detail_status);
         buttonAcceptOrder = (Button) findViewById(R.id.buttonAcceptOrder);
         buttonTuChoi = (Button)findViewById(R.id.buttonTuChoiOrder);
     }
@@ -82,7 +80,6 @@ public class NewOrderActivity extends AppCompatActivity
     {
         textViewNew_order_detail_dia_chi_khach.setText(bill.getDiaChiaGiao());
         textViewNew_order_detail_dia_chi_quan.setText(MainActivity.restaurant.getAddress());
-        textViewNew_order_detail_trang_thai.setText(String.valueOf(bill.getTrangThai()));
     }
     private void getTotalPrice(List<BillDetail> billDetailList)
     {

@@ -5,7 +5,6 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
     tools:context=".Activity.MainActivity">
     <FrameLayout
         android:layout_width="match_parent"
@@ -19,9 +18,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="1dp"
         android:layout_marginEnd="0dp"
         android:background="@drawable/gradient"
+        android:textAlignment="center"
         app:itemIconTint="@color/nav_item_color"
         app:itemTextColor="@color/nav_item_color"
         app:layout_constraintBottom_toBottomOf="parent"
