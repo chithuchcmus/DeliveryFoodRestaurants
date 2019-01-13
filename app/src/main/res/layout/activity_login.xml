@@ -30,6 +30,7 @@
             android:drawableLeft="@drawable/ic_action_user"
             android:ems="10"
             android:textColorHint="#fff"
+            android:textColor="#fff"
             android:hint="Tài khoản"
             android:inputType="numberDecimal"
             android:id="@+id/username_login"/>
@@ -48,6 +49,7 @@
             android:background="#11000000"
             android:drawableLeft="@drawable/ic_action_pass"
             android:ems="10"
+            android:textColor="#fff"
             android:textColorHint="#fff"
             android:hint="Mật Khẩu"
             android:inputType="textPassword"
@@ -57,7 +59,7 @@
 
 
     <android.support.design.button.MaterialButton
-        android:layout_width="300dp"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         app:cardBackgroundColor="@color/colorAccent"
         app:cardCornerRadius="25dp"
@@ -66,8 +68,9 @@
         android:layout_marginBottom="31dp"
         android:layout_above="@+id/register"
         android:background="@drawable/mybutton"
-        android:text="Login"
+        android:text="Đăng Nhập"
         android:textColor="#fff"
+        android:textColorHint="#fff"
         android:fontFamily="@font/arrusb"
         android:textSize="14dp"
         android:layout_centerHorizontal="true" />
@@ -76,8 +79,9 @@
         android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register Here."
+        android:text="Đăng Ký"
         android:textColor="#fff"
+        android:textColorHint="#fff"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="6dp" />

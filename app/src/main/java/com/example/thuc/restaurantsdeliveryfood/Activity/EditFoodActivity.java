@@ -18,7 +18,6 @@ import android.support.design.button.MaterialButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -100,7 +99,7 @@ public class EditFoodActivity extends AppCompatActivity
             public void onClick(View v) {
                 if(checkfind==1)
                 {
-                    onUpload();
+                    getUrlFromImage();
                     checkfind=0;
                 }
                 else
@@ -206,7 +205,7 @@ public class EditFoodActivity extends AppCompatActivity
 
         }
     }
-    private void onUpload() {
+    private void getUrlFromImage() {
         if (chosenFile == null )
         {
             Toast.makeText(EditFoodActivity.this, "Choose a file before upload.", Toast.LENGTH_SHORT)
@@ -344,5 +343,9 @@ public class EditFoodActivity extends AppCompatActivity
             bmImage.setImageBitmap(result);
         }
     }
-
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
 }

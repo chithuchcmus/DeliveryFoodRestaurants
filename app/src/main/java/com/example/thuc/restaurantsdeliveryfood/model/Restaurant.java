@@ -16,6 +16,10 @@ public class Restaurant extends Account  implements Serializable {
     public String getAddress() {
         return address;
     }
+    public void setImage_path(String url)
+    {
+        this.image_path=url;
+    }
 
     public String getImage_path() {
         return image_path;

@@ -52,12 +52,12 @@ public class AddFoodActivity extends AppCompatActivity {
     private MaterialButton addFood;
     private ImageView imageViewFood;
     private final int RESULT_LOAD_IMAGE = 5;
-    TextInputEditText nameFoodET;
-    TextInputEditText priceET;
-    Food food;
+    private TextInputEditText nameFoodET;
+    private TextInputEditText priceET;
+    private Food food;
     private final int PICK_IMAGE_REQUEST = 1;
     private final int READ_WRITE_EXTERNAL = 1003;
-    ImageInfoRespone imageInfoRespone;
+    private ImageInfoRespone imageInfoRespone;
 
     private void getInput() {
         nameFood = nameFoodET.getText().toString();
@@ -79,7 +79,7 @@ public class AddFoodActivity extends AppCompatActivity {
         addFood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onUpload();
+                getUrlFromImage();
             }
         });
        addImage.setOnClickListener(new View.OnClickListener() {
@@ -148,7 +148,7 @@ public class AddFoodActivity extends AppCompatActivity {
         }
     }
 
-    private void onUpload() {
+    private void getUrlFromImage() {
         if (chosenFile == null)
         {
             Toast.makeText(AddFoodActivity.this, "Choose a file before upload.", Toast.LENGTH_SHORT)
@@ -268,5 +268,10 @@ public class AddFoodActivity extends AppCompatActivity {
             default:
                 super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+    }
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 }

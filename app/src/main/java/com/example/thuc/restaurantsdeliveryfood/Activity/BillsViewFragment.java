@@ -26,11 +26,11 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class BillsViewFragment extends Fragment implements BillViewAdapter.BillViewOnClickListener {
-    int resid;
-    RecyclerView recyclerView;
-    List<Bill> bills;
-    BillViewAdapter adapter;
-    int userId;
+    private int resid;
+    private RecyclerView recyclerView;
+    private List<Bill> bills;
+    private BillViewAdapter adapter;
+    private int userId;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -60,7 +60,7 @@ public class BillsViewFragment extends Fragment implements BillViewAdapter.BillV
             public void run() {
                 while (true) {
 
-                    recyclerView.postDelayed(updateData, 2000);
+                    recyclerView.postDelayed(updateData, 5000);
                     try {
                         Thread.sleep(2000);
                     } catch (InterruptedException e) {
@@ -108,7 +108,7 @@ public class BillsViewFragment extends Fragment implements BillViewAdapter.BillV
         Intent i = new Intent(this.getActivity(), NewOrderActivity.class);
         i.putExtra("neworder", r);
         this.getActivity().startActivityForResult(i, MainActivity.ACCCEPT_BILL_STATUS);
+        this.getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
-
 
 }

@@ -45,6 +45,7 @@
         android:drawableLeft="@drawable/ic_action_user"
         android:ems="10"
         android:textColorHint="#fff"
+        android:textColor="#fff"
         android:hint="Tên Quán"
         android:inputType="textPersonName"
         android:textSize="16dp" />
@@ -56,6 +57,7 @@
         android:drawableLeft="@drawable/ic_action_phone"
         android:ems="10"
         android:textColorHint="#fff"
+        android:textColor="#fff"
         android:hint="Số Điện Thoại"
         android:inputType="textPersonName"
         android:textSize="16dp"
@@ -71,6 +73,7 @@
         android:drawableLeft="@drawable/ic_action_pass"
         android:ems="10"
         android:hint="Mật khẩu"
+        android:textColor="#fff"
         android:inputType="textPassword"
         android:textSize="16dp"
         android:layout_marginBottom="15dp"
@@ -83,6 +86,7 @@
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:background="#11000000"
+        android:textColor="#fff"
         android:drawableLeft="@drawable/ic_action_email"
         android:ems="10"
         android:hint="Email"
@@ -94,6 +98,7 @@
 
     <EditText
         android:textColorHint="#fff"
+        android:textColor="#fff"
         android:id="@+id/address_register"
         android:layout_width="250dp"
         android:layout_height="40dp"
@@ -127,7 +132,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="Register"
+                android:text="Đăng Ký"
                 android:textColor="#fff"
                 android:textSize="18sp" />
         </RelativeLayout>

@@ -29,10 +29,10 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class RestaurantDetailCommentFragment extends Fragment {
-    RecyclerView recyclerView;
-    CommentViewAdapter adapter;
-    List<Comment> comments;
-    View view;
+    private RecyclerView recyclerView;
+    private  CommentViewAdapter adapter;
+    private List<Comment> comments;
+    private  View view;
 
 
     @Nullable

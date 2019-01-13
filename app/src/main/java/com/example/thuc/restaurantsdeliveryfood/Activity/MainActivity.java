@@ -23,7 +23,7 @@ import static android.content.ContentValues.TAG;
 
 public class MainActivity extends AppCompatActivity  {
 
-    AlertDialog.Builder dialog ;
+    private AlertDialog.Builder dialog ;
     static public Restaurant restaurant = null;
     final static public int EDIT_FOOD_SUCCES=20;
     final static public int EDIT_FOOD_FAIL=21;
@@ -41,7 +41,9 @@ public class MainActivity extends AppCompatActivity  {
     final static public int DENY_BILL_SUCCES=32;
     final static public int DENY_BILL_FAIL=33;
 
-
+    final static public int CHANGE_PASS_STATUS=4;
+    final static public int CHANGE_PASS_SUCCES=40;
+    final static public int CHANGE_PASS_FAIL=41;
 
     private FrameLayout frame;
     private FoodViewFrament foodViewFrament = new FoodViewFrament();
@@ -119,7 +121,7 @@ public class MainActivity extends AppCompatActivity  {
             }
             else if(resultCode == MainActivity.ACCCEPT_BILL_FAIL)
             {
-                dialog.setMessage("Xác nhận thất bại\n");
+                dialog.setMessage("Xác nhận thất bại, vui lòng thử lại sau\n");
                 AlertDialog alertDialog = dialog.create();
                 alertDialog.show();
             }
@@ -143,7 +145,7 @@ public class MainActivity extends AppCompatActivity  {
             }
             else if(resultCode == MainActivity.ADD_FOOD_FAIL)
             {
-                dialog.setMessage("Thêm Món Ăn thất bại\n");
+                dialog.setMessage("Thêm Món Ăn thất bại, vui lòng thử lại sau \n");
                 AlertDialog alertDialog = dialog.create();
                 alertDialog.show();
             }
@@ -159,7 +161,7 @@ public class MainActivity extends AppCompatActivity  {
             }
             else if(resultCode == MainActivity.EDIT_FOOD_FAIL)
             {
-                dialog.setMessage("Sửa thông tin món ăn thất bại\n");
+                dialog.setMessage("Sửa thông tin món ăn thất bại, vui lòng thử lại sau\n");
                 AlertDialog alertDialog = dialog.create();
                 alertDialog.show();
             }
@@ -172,14 +174,34 @@ public class MainActivity extends AppCompatActivity  {
             }
             else if(resultCode == MainActivity.DELETE_FOOD_FAIL)
             {
-                dialog.setMessage("Xóa món ăn thất bại\n");
+                dialog.setMessage("Xóa món ăn thất bại, vui lòng thử lại sau\n");
+                AlertDialog alertDialog = dialog.create();
+                alertDialog.show();
+            }
+        }
+        else if(requestCode == MainActivity.CHANGE_PASS_STATUS)
+        {
+            if(resultCode == MainActivity.CHANGE_PASS_SUCCES)
+            {
+                dialog.setMessage("Thay đổi mật khẩu thành công\n");
+                foodViewFrament.getFood();
+                AlertDialog alertDialog = dialog.create();
+                alertDialog.show();
+            }
+            else if(resultCode == MainActivity.CHANGE_PASS_FAIL)
+            {
+                dialog.setMessage("Thay đổi mật khẩu thất bại, vui lòng thử lại sau\n");
                 AlertDialog alertDialog = dialog.create();
                 alertDialog.show();
             }
         }
         else {
-
         }
+    }
 
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 }

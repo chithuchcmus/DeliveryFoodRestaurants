@@ -38,10 +38,10 @@ public class NewOrderActivity extends AppCompatActivity
     private Button buttonAcceptOrder;
     private Button buttonTuChoi;
 
-    RecyclerView recyclerView;
-    List<BillDetail> billDetails;
-    NewOrderDetailsAdapter adapter;
-    Bill bill;
+    private   RecyclerView recyclerView;
+    private  List<BillDetail> billDetails;
+    private   NewOrderDetailsAdapter adapter;
+    private   Bill bill;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -207,5 +207,10 @@ public class NewOrderActivity extends AppCompatActivity
                 }
             }
         });
+    }
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 }

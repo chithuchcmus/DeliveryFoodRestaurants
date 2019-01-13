@@ -62,6 +62,13 @@ public interface CvlApi {
     @GET("/xem_danh_gia")
     Call<List<Comment>>getComments(@Query("id_quan_an") int quanan);
 
+    @GET("/update_pass/quan_an")
+    Call<PostResponse>  ChangePass(@Query("id") int id_quan_an,@Query("old_pass") String oldPass ,@Query("new_pass") String newPass);
+
+    @GET("/update_avatar/quan_an")
+    Call<PostResponse>  UpdateAvatar(@Query("id") int id_quan_an,@Query("anh") String url);
+
+
     @Multipart
     @Headers({
             "Authorization: Client-ID 1a89bd8577b6371"

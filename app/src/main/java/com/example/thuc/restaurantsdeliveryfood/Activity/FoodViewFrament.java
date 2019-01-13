@@ -29,10 +29,10 @@ import retrofit2.Retrofit;
 
 public class FoodViewFrament extends Fragment implements FoodDetailsAdapter.OnFoodClickListener
 {
-    RecyclerView recyclerView;
-    List<Food> foodList;
-    FoodDetailsAdapter adapter;
-    FloatingActionButton floatingActionButton;
+    private RecyclerView recyclerView;
+    private List<Food> foodList;
+    private  FoodDetailsAdapter adapter;
+    private  FloatingActionButton floatingActionButton;
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState)  {
@@ -52,6 +52,8 @@ public class FoodViewFrament extends Fragment implements FoodDetailsAdapter.OnFo
                 Intent i = new Intent(FoodViewFrament.this.getActivity(),AddFoodActivity.class);
                 i.putExtra("data",2);
                 FoodViewFrament.this.getActivity().startActivityForResult(i,MainActivity.ADD_FOOD_STATUS);
+                FoodViewFrament.this.getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
             }
         });
         return view;

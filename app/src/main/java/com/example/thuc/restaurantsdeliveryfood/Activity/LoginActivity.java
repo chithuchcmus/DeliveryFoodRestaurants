@@ -30,11 +30,11 @@ import retrofit2.Retrofit;
 
 public class LoginActivity extends AppCompatActivity {
 
-    String phone_number;
-    String password;
-    MaterialButton cardViewLogin;
-    TextView register;
-    AlertDialog.Builder builder;
+    private  String phone_number;
+    private  String password;
+    private  MaterialButton cardViewLogin;
+    private  TextView register;
+    private AlertDialog.Builder builder;
     boolean isSendingRequest = false;
     final private int SIGN_IN=3;
     final private int SIGN_IN_SUCCES=10;
@@ -64,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SignUpActivity.class);
         intent.putExtra("AAA",1);
         LoginActivity.this.startActivityForResult(intent,SIGN_IN);
+        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
     }
 
     @Override
@@ -113,6 +114,7 @@ public class LoginActivity extends AppCompatActivity {
                         Intent i = new Intent(LoginActivity.this, MainActivity.class);
                         i.putExtra("res",restaurants.get(0));
                         startActivity(i);
+                        LoginActivity.this.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                         LoginActivity.this.finish();
                     }
                     else{

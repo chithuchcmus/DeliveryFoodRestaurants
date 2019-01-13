@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.thuc.restaurantsdeliveryfood">
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +14,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeMaterial">
-
         <activity
             android:name=".Activity.LoginActivity"
             android:theme="@style/NoActionBarMaterial">
@@ -26,20 +26,18 @@
         <activity
             android:name=".Activity.SignUpActivity"
             android:theme="@style/NoActionBarMaterial" />
-
-        <activity android:name=".Activity.NewOrderActivity"
-            android:theme="@style/NoActionBarMaterial"/>
-        <activity android:name=".Activity.AddFoodActivity"
-            android:theme="@style/NoActionBarMaterial">
-
-        </activity>
-
         <activity
-        android:name=".Activity.MainActivity" />
-        <activity android:name=".Activity.EditFoodActivity"
-            android:theme="@style/NoActionBarMaterial">
-        </activity>
-
+            android:name=".Activity.NewOrderActivity"
+            android:theme="@style/NoActionBarMaterial" />
+        <activity
+            android:name=".Activity.AddFoodActivity"
+            android:theme="@style/NoActionBarMaterial"></activity>
+        <activity android:name=".Activity.MainActivity" />
+        <activity
+            android:name=".Activity.EditFoodActivity"
+            android:theme="@style/NoActionBarMaterial"></activity>
+        <activity android:name=".Activity.InfoAppActivity" />
+        <activity android:name=".Activity.ChangePasswordActivity"></activity>
     </application>
 
 </manifest>

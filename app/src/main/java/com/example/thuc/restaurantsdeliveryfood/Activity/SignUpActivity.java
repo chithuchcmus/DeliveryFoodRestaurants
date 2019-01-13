@@ -36,11 +36,11 @@ public class SignUpActivity extends AppCompatActivity {
     final private int SIGN_IN_SUCCES=10;
     final private int SIGN_IN_FAIL=15;
 
-    EditText nameResET;
-    EditText phoneET;
-    EditText emailET;
-    EditText passwordET;
-    EditText addressET;
+    private EditText nameResET;
+    private EditText phoneET;
+    private EditText emailET;
+    private EditText passwordET;
+    private EditText addressET;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -137,6 +137,11 @@ public class SignUpActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
 }

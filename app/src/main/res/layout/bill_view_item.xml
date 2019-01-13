@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
-            android:fontFamily="@font/crystal"
+            android:fontFamily="@font/museosanscyrl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/bill"
@@ -19,17 +19,17 @@
             android:textStyle="bold"
             android:id="@+id/bill_id_text_view"/>
         <TextView
-            android:fontFamily="@font/crystal"
+            android:fontFamily="@font/museosanscyrl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/bill_address"
             android:layout_marginLeft="5dp"
             android:id="@+id/bill_address_text_view"/>
         <TextView
-            android:fontFamily="@font/arrusb"
+            android:fontFamily="@font/museosanscyrl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             android:textAlignment="viewEnd"
             android:textColor="@color/color_black"
