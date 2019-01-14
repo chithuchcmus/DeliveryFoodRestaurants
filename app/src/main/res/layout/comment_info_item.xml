@@ -14,18 +14,19 @@
         android:layout_height="match_parent">
         <ImageView
             android:id="@+id/comment_user_avatar"
-            android:layout_width="10dp"
+            android:layout_width="100dp"
             android:layout_height="match_parent" />
         <android.support.design.card.MaterialCardView
             android:layout_marginStart="100dp"
             app:cardElevation="2dp"
+            android:id="@+id/parent_comment"
+            android:layout_alignParentTop="true"
             android:layout_marginBottom="2dp"
             android:layout_width="match_parent"
-            android:layout_height="50dp" >
+            android:layout_height="30dp" >
             <TextView
                 android:textColor="#0b99c9"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="10dp"
                 android:id="@+id/comment_title"
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/museosanscyrl"
@@ -35,16 +36,32 @@
         </android.support.design.card.MaterialCardView>
         <android.support.design.card.MaterialCardView
             android:layout_marginStart="100dp"
-            android:layout_marginTop="52dp"
             app:cardElevation="2dp"
+            android:id="@+id/parent1_comment"
+            android:layout_below="@+id/parent_comment"
             android:layout_width="match_parent"
-            android:layout_height="48dp" >
+            android:layout_height="30dp" >
             <TextView
                 android:textColor="#0b99c9"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
                 android:id="@+id/comment_user_name"
+                android:fontFamily="@font/museosanscyrl"
+                android:textSize="22sp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/>
+        </android.support.design.card.MaterialCardView>
+        <android.support.design.card.MaterialCardView
+            android:layout_marginStart="100dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_below="@+id/parent1_comment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <TextView
+                android:textColor="#0b99c9"
+                android:id="@+id/comment_detail"
+                android:layout_marginStart="10dp"
                 android:fontFamily="@font/museosanscyrl"
                 android:textSize="22sp"
                 android:layout_height="match_parent"

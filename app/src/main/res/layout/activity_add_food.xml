@@ -73,7 +73,6 @@
 
     <ImageView
         android:layout_alignLeft="@+id/gia_mon_add_layout"
-        android:layout_alignRight="@+id/gia_mon_add_layout"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="100dp"
         android:layout_alignBottom="@+id/add_submit"
